@@ -40,17 +40,18 @@
             margin-right:600px;
             justify-content:space-evenly;
         }
-        #ipt{
-            border-radius:10px;
-        }
+       
     </style>
 </head>
 <body>
-    <div id="central">
-        <form method="get" action="01valor.php">
-            <input  id="ipt" type="number" name="v"/>
-            <input  id="ipt" type="submit" value="calcular Raiz"/>
-    </div>
+<div id="central">
+<?php
+    $valor = $_GET["v"];
+    $rq = sqrt($valor);
+    echo "<h1>A raiz de de $valor é: </h1>". number_format($rq,2);
+    ?>
+    <a href="ex02.php">Voltar<<</a>
+</div>
 </body>
  
 </html>
